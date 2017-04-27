@@ -1098,6 +1098,12 @@ object {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.top-top {
+  background-color: #000000;
+  
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -2863,6 +2869,8 @@ input[type="button"].btn-block {
 /*--------------------------------------------------------------
 10.0 - Navbars
 --------------------------------------------------------------*/
+/*
+
 .navbar {
   margin-bottom: 2em;
   border-bottom: 0px solid transparent;
@@ -4294,6 +4302,9 @@ body.admin-bar .offcanvas-wrap {
 .offcanvas-widget {
   margin-top: 3rem;
 }
+
+*/
+
 /*--------------------------------------------------------------
 11.0 - Breadcrumbs
 --------------------------------------------------------------*/
