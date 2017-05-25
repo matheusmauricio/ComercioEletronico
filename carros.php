@@ -115,25 +115,28 @@
                                     </ul>
                                 </div>
                             </div>
-                            <?php for($i=0; $prod[$i] != null; $i++ ) {
-                              
-                             // echo $prod[$i]['nome'];
-
-                            //}
-
-                            ?>
                             <div class="products-masonry-wrap">
                                 <ul class="products masonry-products row masonry-wrap">
+                                  <?php
+                                  $i=0;
+                                  foreach($prod as $prods) {
+
+                                   // echo $prod[$i]['nome'];
+
+                                  //} for ($i = 0; $prod[$i] != null; $i++){
+
+                                  ?>
+
                                     <li class="product product-no-border style-2 masonry-item col-md-3 col-sm-6 aliquam nulla">
                                         <div class="product-container">
                                             <figure>
                                                 <div class="product-wrap">
                                                     <div class="product-images">
                                                         <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
-                                                            <a href="shop-detail-1.html"><img width="450" height="450" src=<?php echo $prod[$i]["imagem1"]; ?> alt=""/></a>
+                                                            <a href="shop-detail-1.html"><img width="450" height="450" src=<?php echo $prod[$i]['imagem1']; ?> alt=""/></a>
                                                         </div>
                                                         <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
-                                                            <a href="shop-detail-1.html"><img width="450" height="450" src=<?php echo $prod[$i]["imagem2"]; ?> alt=""/></a>
+                                                            <a href="shop-detail-1.html"><img width="450" height="450" src=<?php echo $prod[$i]['imagem2']; ?> alt=""/></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -153,11 +156,11 @@
                                                         </div>
                                                         <div class="info-content-wrap">
                                                             <h3 class="product_title">
-                                                                <a href="shop-detail-1.html"><?php echo $prod[$i]["nome"]; ?></a>
+                                                                <a href="shop-detail-1.html"><?php echo $prod[$i]['nome']; ?></a>
                                                             </h3>
                                                             <div class="info-price">
 																		<span class="price">
-																			<span class="amount"><?php echo $prod[$i]["preco"]; ?></span>
+																			<span class="amount"><?php echo $prod[$i]['preco']; ?></span>
 																		</span>
                                                             </div>
                                                             <div class="loop-action">
@@ -173,13 +176,13 @@
                                             </figure>
                                         </div>
                                     </li>
-
+                                    <?php
+                                    $i++;
+                                     }
+                                     ?>
 
                                 </ul>
                             </div>
-                            <?php
-                             }
-                             ?>
                             <div class="loadmore-action">
                                 <a class="btn btn-default-outline btn-outline" href="#">
                                     <span>Load More</span>
