@@ -50,35 +50,11 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Mm Veículos - Nunca te deixando na mão (ou a pé)</a>
-        </div>
+    <?php
 
-        <div class="container">
+      include("cabecalho.php");
 
-          <!-- The justified navigation menu is meant for single line per list item.
-               Multiple lines will require custom code not provided by Bootstrap. -->
-          <div class="masthead">
-            <nav>
-              <ul class="nav nav-justified">
-                <li class="active"><a href="index.html">Página Inicial</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Contato</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-    </nav>
+    ?>
 
     <div class="jumbotron">
       <div class="container">
@@ -104,7 +80,7 @@
           <div class="container">
             <div class="carousel-caption">
 
-              <p><a class="btn btn-lg btn-primary" href="carros.php?id=carro" role="button">Ver Carros</a></p>
+              <p><a class="btn btn-lg btn-primary" href="carros.php?id=carros" role="button">Ver Carros</a></p>
             </div>
           </div>
         </div>
@@ -113,7 +89,7 @@
           <div class="container">
             <div class="carousel-caption">
 
-              <p><a class="btn btn-lg btn-primary" href="Motos.html" role="button">Ver Motos</a></p>
+              <p><a class="btn btn-lg btn-primary" href="motos.php?id=motos" role="button">Ver Motos</a></p>
             </div>
           </div>
         </div>
@@ -122,7 +98,7 @@
           <div class="container">
             <div class="carousel-caption">
 
-              <p><a class="btn btn-lg btn-primary" href="Caminhao.html" role="button">Ver Caminhões</a></p>
+              <p><a class="btn btn-lg btn-primary" href="caminhao.php?id=caminhoes" role="button">Ver Caminhões</a></p>
             </div>
           </div>
         </div>
@@ -131,7 +107,7 @@
         <div class="container">
           <div class="carousel-caption">
 
-            <p><a class="btn btn-lg btn-primary" href="Onibus.html" role="button">Ver Ônibus</a></p>
+            <p><a class="btn btn-lg btn-primary" href="onibus.php?id=onibus" role="button">Ver Ônibus</a></p>
           </div>
         </div>
       </div>
@@ -164,34 +140,35 @@
           <img src="imagens/carroPaginaInicial.jpg" alt="Imagem carro" class="img-rounded" width="256px" height="166px">
           <h2>Carros</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="carros.php" role="button">Ver todos os Carros &raquo;</a></p>
+          <p><a class="btn btn-default" href="carros.php?id=carros" role="button">Ver todos os Carros &raquo;</a></p>
         </div>
         <div class="col-md-3">
           <img src="imagens/motoPaginaInicial.jpg" alt="Imagem moto" class="img-rounded" width="256px" height="166px">
           <h2>Motos</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="Motos.html" role="button">Ver todas as Motos &raquo;</a></p>
+          <p><a class="btn btn-default" href="motos.php?id=motos" role="button">Ver todas as Motos &raquo;</a></p>
        </div>
         <div class="col-md-3">
           <img src="imagens/caminhaoPaginaInicial.png" alt="Imagem caminhão" class="img-rounded" width="256px" height="166px">
           <h2>Caminhões</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="Caminhao.html" role="button">Ver todos os Caminhões &raquo;</a></p>
+          <p><a class="btn btn-default" href="caminhao.php?id=caminhoes" role="button">Ver todos os Caminhões &raquo;</a></p>
         </div>
 		<div class="col-md-3">
           <img src="imagens/onibusPaginaInicial.png" alt="Imagem ônibus" class="img-rounded" width="256px" height="166px">
           <h2>Ônibus</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="Onibus.html" role="button">Ver todos os Ônibus &raquo;</a></p>
+          <p><a class="btn btn-default" href="onibus.php?id=onibus" role="button">Ver todos os Ônibus &raquo;</a></p>
         </div>
       </div>
 
-      <hr>
 
-      <footer>
-        <p align="center">&copy; 2017 Company, Inc.</p>
-      </footer>
+
     </div> <!-- /container -->
+
+    <?php
+      include("rodape.php");
+    ?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

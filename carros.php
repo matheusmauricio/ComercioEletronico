@@ -8,73 +8,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
 
-    <title>Carros - MmVeículos</title>
+
 
   <!--  <link rel="shortcut icon" href="images/favicon.ico"> Ícone do site -->
 
-    <link rel='stylesheet' href='dist/css/bootstrap.min.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/swatches-and-photos.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/prettyPhoto.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/jquery.selectBox.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/font-awesome.min.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic%7CCrimson+Text:400,400italic,600,600italic,700,700italic' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/elegant-icon.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/bootstrap.min.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/swatches-and-photos.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/prettyPhoto.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/jquery.selectBox.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/font-awesome.min.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic%7CCrimson+Text:400,400italic,600,600italic,700,700italic' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/elegant-icon.css' type='text/css' media='all'/>
 
-    <link rel='stylesheet' href='dist/css/style.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/style.css' type='text/css' media='all'/>
 
-    <link rel='stylesheet' href='dist/css/commerce.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/custom.css' type='text/css' media='all'/>
-    <link rel='stylesheet' href='dist/css/magnific-popup.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/commerce.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/custom.css' type='text/css' media='all'/>
+  <link rel='stylesheet' href='dist/css/magnific-popup.css' type='text/css' media='all'/>
 
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="jumbotron.css" rel="stylesheet">
+
+  <title>Carros - MmVeículos</title>
 
 </head>
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Mm Veículos - Nunca te deixando na mão (ou a pé)</a>
-        </div>
+<?php
 
-        <div class="container">
-            <!-- The justified navigation menu is meant for single line per list item.
-                 Multiple lines will require custom code not provided by Bootstrap. -->
-            <div class="masthead">
-                <nav>
-                    <ul class="nav nav-justified">
-                        <li class="active"><a href="index.html">Página Inicial</a></li>
-                        <li><a href="#">Sobre nós</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
+include("cabecalho.php");
 
-</nav>
+?>
 
 <div class="jumbotron">
     <div class="container">
@@ -219,9 +198,9 @@
     </div>
 </div>
 
-<footer>
-    <p>&copy; 2017 Company, Inc.</p>
-</footer>
+<?php
+  include("rodape.php");
+?>
 
 <script type='text/javascript' src='dist/js/jquery.js'></script>
 <script type='text/javascript' src='dist/js/jquery-migrate.min.js'></script>
