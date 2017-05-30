@@ -80,7 +80,7 @@
           <div class="container">
             <div class="carousel-caption">
 
-              <p><a class="btn btn-lg btn-primary" href="carros.php?id=carros" role="button">Ver Carros</a></p>
+              <p><a class="btn btn-lg btn-primary" href="veiculos.php?id=carro" role="button">Ver Carros</a></p>
             </div>
           </div>
         </div>
@@ -89,7 +89,7 @@
           <div class="container">
             <div class="carousel-caption">
 
-              <p><a class="btn btn-lg btn-primary" href="motos.php?id=motos" role="button">Ver Motos</a></p>
+              <p><a class="btn btn-lg btn-primary" href="veiculos.php?id=moto" role="button">Ver Motos</a></p>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@
           <div class="container">
             <div class="carousel-caption">
 
-              <p><a class="btn btn-lg btn-primary" href="caminhao.php?id=caminhoes" role="button">Ver Caminhões</a></p>
+              <p><a class="btn btn-lg btn-primary" href="veiculos.php?id=caminhao" role="button">Ver Caminhões</a></p>
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@
         <div class="container">
           <div class="carousel-caption">
 
-            <p><a class="btn btn-lg btn-primary" href="onibus.php?id=onibus" role="button">Ver Ônibus</a></p>
+            <p><a class="btn btn-lg btn-primary" href="veiculos.php?id=onibus" role="button">Ver Ônibus</a></p>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
           <img src="imagens/carroPaginaInicial.jpg" alt="Imagem carro" class="img-rounded" width="256px" height="166px">
           <h2>Carros</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="carros.php?id=carros" role="button">Ver todos os Carros &raquo;</a></p>
+          <p><a class="btn btn-default" href="carros.php?id=carro" role="button">Ver todos os Carros &raquo;</a></p>
         </div>
         <div class="col-md-3">
           <img src="imagens/motoPaginaInicial.jpg" alt="Imagem moto" class="img-rounded" width="256px" height="166px">
@@ -152,7 +152,7 @@
           <img src="imagens/caminhaoPaginaInicial.png" alt="Imagem caminhão" class="img-rounded" width="256px" height="166px">
           <h2>Caminhões</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="caminhao.php?id=caminhoes" role="button">Ver todos os Caminhões &raquo;</a></p>
+          <p><a class="btn btn-default" href="caminhao.php?id=caminhao" role="button">Ver todos os Caminhões &raquo;</a></p>
         </div>
 		<div class="col-md-3">
           <img src="imagens/onibusPaginaInicial.png" alt="Imagem ônibus" class="img-rounded" width="256px" height="166px">
