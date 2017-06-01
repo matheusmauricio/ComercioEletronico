@@ -1,5 +1,5 @@
 <?php
-
+  include_once("pegaNome.php");
   include_once ("conexaoBanco.php");
 
   ?>
@@ -52,13 +52,13 @@
 <?php
 
 include_once("cabecalho.php");
-include_once("pegaNome.php");
+
 
 ?>
 
 <div class="jumbotron">
     <div class="container">
-        <h1><?php echo strtoupper($nome); ?> </h1>
+        <h1><?php echo mb_strtoupper($nome, 'UTF-8'); ?> </h1>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais! &raquo;</a></p>     BOTÃO SAIBA MAIS       -->
     </div>
 </div>
