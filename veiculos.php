@@ -16,8 +16,6 @@
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
 
-
-
   <!--  <link rel="shortcut icon" href="images/favicon.ico"> Ícone do site -->
 
   <link rel='stylesheet' href='dist/css/bootstrap.min.css' type='text/css' media='all'/>
@@ -113,10 +111,10 @@ include_once("cabecalho.php");
                                                 <div class="product-wrap">
                                                     <div class="product-images">
                                                         <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
-                                                            <a href="shop-detail-1.html"><img width="450" height="450" src=<?php echo $prod[$i]['imagem1']; ?> alt=""/></a>
+                                                            <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><img width="450" height="450" src=<?php echo $prod[$i]['imagem1']; ?> alt=""/></a>
                                                         </div>
                                                         <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
-                                                            <a href="shop-detail-1.html"><img width="450" height="450" src=<?php echo $prod[$i]['imagem2']; ?> alt=""/></a>
+                                                            <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><img width="450" height="450" src=<?php echo $prod[$i]['imagem2']; ?> alt=""/></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -136,11 +134,11 @@ include_once("cabecalho.php");
                                                         </div>
                                                         <div class="info-content-wrap">
                                                             <h3 class="product_title">
-                                                                <a href="shop-detail-1.html"><?php echo $prod[$i]['nome']; ?></a>
+                                                                <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><?php echo $prod[$i]['nome']; ?></a>
                                                             </h3>
                                                             <div class="info-price">
 																		<span class="price">
-																			<span class="amount"><?php echo $prod[$i]['preco']; ?></span>
+																			<span class="amount">R$ <?php echo $prod[$i]['preco']; ?></span>
 																		</span>
                                                             </div>
                                                             <div class="loop-action">
@@ -157,8 +155,8 @@ include_once("cabecalho.php");
                                         </div>
                                     </li>
                                     <?php
-                                    $i++;
-                                     }
+                                      $i++;
+                                       }
                                      ?>
 
                                 </ul>

@@ -1,5 +1,5 @@
 <?php
-  include_once("pegaNome.php");
+  //include_once("pegaNome.php");
 
     $conexaoBanco = new PDO('sqlite:banco.sqlite') or die ("Não Conectou!");
 

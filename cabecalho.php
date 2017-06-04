@@ -7,15 +7,14 @@
   }
   </style>
 
-<<<<<<< HEAD
+
 <?php
   include_once("funcaoLogar.php");
 
   $logado = estaLogado();
 
 ?>
-=======
->>>>>>> e1219c2b1186a676330388fee5f917759ae57fb1
+
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -35,11 +34,9 @@
             <div class="masthead">
                 <nav>
                     <ul class="nav nav-justified">
-<<<<<<< HEAD
+
                         <li class="active"><a href="index.php">Página Inicial</a></li>
-=======
-                        <li class="active"><a href="index.html">Página Inicial</a></li>
->>>>>>> e1219c2b1186a676330388fee5f917759ae57fb1
+
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Veículos <span class="caret"></span></a>
                           <ul class="dropdown-menu">
                               <li><a href="veiculos.php?id=carro">Carros</a></li>
