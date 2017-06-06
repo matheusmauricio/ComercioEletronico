@@ -6,13 +6,27 @@
 
   ?>
 
+  <script type="text/javascript">
+    function trocaImagemExpositor(url){
+
+      expositorImagem.src=url;
+
+      novaImagem.href = expositorImagem.src;
+    }
+
+    function imagemPopup (){
+      //novaImagem.href = expositorImagem.src;
+    }
+  </script>
+
+
 <!doctype html>
 <html lang="pt-br">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<title>Produto Detalhado - MmVeículos</title>
-		<link rel="shortcut icon" href="images/favicon.ico">
+		<!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
 
 		<link rel='stylesheet' href='dist/css/bootstrap.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/swatches-and-photos.css' type='text/css' media='all'/>
@@ -62,8 +76,8 @@
 																<div class="caroufredsel-wrap">
 																	<ul class="caroufredsel-items">
 																		<li class="caroufredsel-item">
-																			<a href="images/products/detail/detail_800x800.jpg" data-rel="magnific-popup-verticalfit">
-																				<img width="600" height="685" src="images/products/detail/detail_800x800.jpg" alt=""/>
+																			<a href="<?php echo $prod[$x-1]['imagem1'];?>" id="novaImagem" data-rel="magnific-popup-verticalfit">
+																				<img width="600" height="685" id="expositorImagem" src=<?php echo $prod[$x-1]['imagem1']; ?> alt=""/>
 																			</a>
 																		</li>
 																	</ul>
@@ -85,7 +99,7 @@
 																		?>
 																		<li class="caroufredsel-item selected">
 																			<div class="thumb">
-																				<a href="#" data-rel="0">
+																				<a onclick="trocaImagemExpositor('<?php echo $prod[$x-1]['imagem'.$j]; ?>')" data-rel="0">
 																					<img width="300" height="300" src=<?php echo $prod[$x-1]['imagem'.$j]; ?> alt=""/>
 																				</a>
 																			</div>
