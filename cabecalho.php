@@ -53,7 +53,7 @@
                               <li><a href="http://wancharle.com.br/ce/erick/">SSCSGO</a></li>
                               <li><a href="http://wancharle.com.br/ce/joao/">Geek Store</a></li>
                               <li><a href="http://wancharle.com.br/ce/andre/">+ Seguro</a></li>
-                              <li><a href="http://wancharle.com.br/ce/ludivan/">Site do Ludivan</a></li>
+                              <li><a href="http://wancharle.com.br/ce/ludivan/">Lud-iFit</a></li>
                               <li><a href="http://wancharle.com.br/ce/oberdan/">Site do Oberdan</a></li>
                             </ul>
                     </ul>
