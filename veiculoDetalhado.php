@@ -14,9 +14,7 @@
       novaImagem.href = expositorImagem.src;
     }
 
-    function imagemPopup (){
-      //novaImagem.href = expositorImagem.src;
-    }
+
   </script>
 
 
@@ -27,14 +25,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<title>Produto Detalhado - MmVeículos</title>
 		<!-- <link rel="shortcut icon" href="images/favicon.ico"> -->
-
+    <link rel="icon" href="../../favicon.ico">
 		<link rel='stylesheet' href='dist/css/bootstrap.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/swatches-and-photos.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/prettyPhoto.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/jquery.selectBox.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/font-awesome.min.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic%7CCrimson+Text:400,400italic,600,600italic,700,700italic' type='text/css' media='all'/>
-		<link rel='stylesheet' href='dist/css/elegant-icon.css' type='text/css' media='all'/>
+		<!-- <link rel='stylesheet' href='dist/css/elegant-icon.css' type='text/css' media='all'/> -->
 		<link rel='stylesheet' href='dist/css/style.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/commerce.css' type='text/css' media='all'/>
 		<link rel='stylesheet' href='dist/css/custom.css' type='text/css' media='all'/>
