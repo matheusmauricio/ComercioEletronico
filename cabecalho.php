@@ -10,6 +10,7 @@
 
 <?php
   include_once("funcaoLogar.php");
+  //include_once("loginProc.php");
 
   $logado = estaLogado();
 
@@ -55,7 +56,7 @@
                               <li><a href="http://wancharle.com.br/ce/ludivan/">Lud-iFit</a></li>
                               <li><a href="http://wancharle.com.br/ce/oberdan/">Site do Oberdan</a></li>
                             </ul>
-
+                          </li>
                             <?php
                               if($_COOKIE["logado"] == "sim"){
                                 //$x = $_POST['pessoa'];
@@ -63,11 +64,11 @@
 
                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Olá <span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                  <li>Bem vindo, fulano <?php //echo $pessoa['nome']; ?></li>
+                                  <li>Bem vindo, fulano <?php echo $pessoa[0]['nome']; ?></li>
                                   <br />
                                   <li> <form name="form1" method="post" action="deslogado.php"><input type="submit" value="Sair"></form></li>
                                 </ul>
-
+                              </li>
                             <?php
                               } else {
                             ?>
@@ -75,8 +76,8 @@
                               <ul class="dropdown-menu">
                                 <form name="form1" method="post" action="loginProc.php">
                                   <fieldset >
-                                    <input type="text" name="Login" placeholder="Digite seu login" required>
-                                    <input type="password" name="Senha" placeholder="Digite sua senha" required>
+                                    <input type="text" name="login" placeholder="Digite seu login" required>
+                                    <input type="password" name="senha" placeholder="Digite sua senha" required>
                                   </fieldset>
                                   <fieldset >
                                     <input type="submit" value="Log in">

@@ -13,7 +13,7 @@
     $email = $_POST['email'];
 
 
-    $SQL = "INSERT INTO 'Usuario' VALUES ('', '$nome', '$telefone', '$sexo', '$cpf', '$email', '$login', '$senha')";
+    $SQL = "INSERT INTO 'Usuario' (nome, telefone, sexo, cpf, email, login, senha) VALUES ('$nome', '$telefone', '$sexo', '$cpf', '$email', '$login', '$senha')";
     $resultado = $conexaoBanco->query($SQL);
 
 

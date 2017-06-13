@@ -7,14 +7,20 @@
     }
 
     if(isset($_POST['senha'])){
-      $senha = $_POST['senha'];
+      $senha = md5($_POST['senha']);
     }
 
-    $SQL = "SELECT * FROM 'administrador' WHERE 'login' = $login AND 'senha' = $senha";
+    $SQL = "SELECT * FROM `administrador` WHERE `login` = '$login' AND `senha` = '$senha'";
     $resultado = $conexaoBanco->query($SQL);
 
-    //$pessoa = $resultado->fetchAll();
+    $pessoa = $resultado->fetchAll();
 
-    //$prod = $resultado->fetchAll();
-    header("location: logado.php");
+    if($pessoa != null){
+      header("location: logado.php");
+    } else {
+      header("location: index.php");
+    }
+
+
+
   ?>
