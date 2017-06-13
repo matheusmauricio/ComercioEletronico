@@ -80,7 +80,11 @@
                                   </fieldset>
                                   <fieldset >
                                     <input type="submit" value="Log in">
-                                    <label><input type="checkbox" checked="checked"> Continuar logado</label>
+                                  </fieldset>
+                                </form>
+                                <form name="form2" method="post" action="telaCadastro.php">
+                                  <fieldset >
+                                    <input type="submit" value="Cadastre-se" href="telaCadastro.php">
                                   </fieldset>
                                 </form>
                               </ul>
