@@ -58,19 +58,21 @@
                             </ul>
                           </li>
                             <?php
-                              if($_COOKIE["logado"] == "sim"){
-                                //$x = $_POST['pessoa'];
+                              if(isSet($_COOKIE['logado']) && ($_COOKIE['logado'] == 'sim')){
+
+                                $usuario = unserialize($_COOKIE['usuario']);
+
                             ?>
 
                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Olá <span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                  <li>Bem vindo, fulano <?php echo $pessoa[0]['nome']; ?></li>
+                                  <li>Bem vindo, <?php echo $usuario[0]['nome']; ?></li>
                                   <br />
                                   <li> <form name="form1" method="post" action="deslogado.php"><input type="submit" value="Sair"></form></li>
                                 </ul>
                               </li>
                             <?php
-                              } else {
+                          } else {
                             ?>
                             <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log in <span class="caret"></span></a>
                               <ul class="dropdown-menu">
@@ -102,31 +104,3 @@
 </nav>
 </body>
 <html>
-
-<?php
-
-/*<nav>
-	<ul>
-		<li id="login">
-			<a id="login-trigger" href="#">
-				Log in <span>&#x25BC;</span>
-			</a>
-			<div id="login-content">
-				<form>
-					<fieldset id="inputs">
-						<input id="username" type="email" name="Email" placeholder="Your email address" required>
-						<input id="password" type="password" name="Password" placeholder="Password" required>
-					</fieldset>
-					<fieldset id="actions">
-						<input type="submit" id="submit" value="Log in">
-						<label><input type="checkbox" checked="checked"> Keep me signed in</label>
-					</fieldset>
-				</form>
-			</div>
-		</li>
-		<li id="signup">
-			<a href="">Sign up FREE</a>
-		</li>
-	</ul>
-</nav>*/
-?>

@@ -4,7 +4,6 @@
 
   ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -48,10 +47,7 @@
 <body>
 
 <?php
-
-include_once("cabecalho.php");
-
-
+  include_once("cabecalho.php");
 ?>
 
 <div class="jumbotron">

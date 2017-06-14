@@ -1,5 +1,5 @@
 <?php
-  //include_once("pegaNome.php");
+
     $conexaoBanco = new PDO('sqlite:banco.sqlite') or die ("Não Conectou!");
 
     if(isset($_POST['login'])){
@@ -12,15 +12,22 @@
 
     $SQL = "SELECT * FROM `administrador` WHERE `login` = '$login' AND `senha` = '$senha'";
     $resultado = $conexaoBanco->query($SQL);
-
     $pessoa = $resultado->fetchAll();
+
+    if($pessoa == null){
+      $SQL = "SELECT * FROM `usuario` WHERE `login` = '$login' AND `senha` = '$senha'";
+      $resultado = $conexaoBanco->query($SQL);
+      $pessoa = $resultado->fetchAll();
+    }
+
+    //echo $pessoa[0]['nome'];
 
     if($pessoa != null){
       header("location: logado.php");
+      setcookie("usuario", serialize($pessoa), time()+3600);
     } else {
-      header("location: index.php");
+      //header("location: index.php");
+      header(sprintf('location: %s', $_SERVER['HTTP_REFERER']));
     }
-
-
 
   ?>

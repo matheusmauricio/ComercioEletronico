@@ -169,15 +169,10 @@
 
 															</p>
 														</div>
-														<form class="cart">
+														<form class="cart" name="form1" method="post" action="comprarVeiculo.php">
 															<div class="add-to-cart-table">
-
 																<button type="submit" class="button">Comprar</button>
 															</div>
-															<?php
-																//$i++;
-																//}
-															?>
 														</form>
 													</div>
 												</div>
