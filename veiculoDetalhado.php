@@ -169,7 +169,7 @@
 
 															</p>
 														</div>
-														<form class="cart" name="form1" method="post" action="comprarVeiculo.php">
+														<form class="cart" name="form1" method="post" action="comprarVeiculo.php?id=<?php echo $id; ?>&codigo=<?php echo $prod[$x-1]['codigo']; ?>">
 															<div class="add-to-cart-table">
 																<button type="submit" class="button">Comprar</button>
 															</div>

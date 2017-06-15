@@ -116,18 +116,7 @@
                                                 </div>
                                                 <figcaption>
                                                     <div class="shop-loop-product-info">
-                                                        <div class="info-meta clearfix">
 
-                                                            <div class="loop-add-to-wishlist">
-                                                                <div class="yith-wcwl-add-to-wishlist">
-                                                                    <div class="yith-wcwl-add-button">
-                                                                        <a href="#" class="add_to_wishlist">
-                                                                            Adicionar à Lista de Desejos
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                         <div class="info-content-wrap">
                                                             <h3 class="product_title">
                                                                 <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><?php echo $prod[$i]['nome']; ?></a>
@@ -139,8 +128,8 @@
                                                             </div>
                                                             <div class="loop-action">
                                                                 <div class="loop-add-to-cart">
-                                                                    <a href="#" class="add_to_cart_button">
-                                                                        Adicionar ao carrinho
+                                                                    <a href="comprarVeiculo.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>" class="add_to_cart_button">
+                                                                        Comprar
                                                                     </a>
                                                                 </div>
                                                             </div>

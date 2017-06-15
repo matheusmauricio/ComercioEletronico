@@ -1,5 +1,5 @@
 <hr>
 
 <footer>
-  <p align="center">&copy; 2017 Company, Inc.</p>
+  <p align="center">Site com Fins Acadêmicos - 2017</p>
 </footer>
