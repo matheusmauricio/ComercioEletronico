@@ -6,6 +6,17 @@
 
   ?>
 
+  <script type="text/javascript">
+    function trocaImagemExpositor(url){
+
+      expositorImagem.src=url;
+
+      novaImagem.href = expositorImagem.src;
+    }
+
+
+  </script>
+
 <!doctype html>
 <html lang="pt-br">
 	<head>

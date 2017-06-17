@@ -68,7 +68,17 @@
                               <ul class="dropdown-menu">
                                   <li>Bem vindo, <?php echo $usuario[0]['nome']; ?></li>
                                   <br />
-                                  <li> <form name="form1" method="post" action="deslogado.php"><input type="submit" value="Sair"></form></li>
+                                  <li>
+                                    <form name="form3" method="post" action="dadosCompras.php">
+                                      <input type="text" name="codigoUsuario" value="<?php echo $usuario[0]['codigo']; ?>" hidden>
+                                      <input type="submit" value="Ver minhas compras">
+                                    </form>
+                                  </li>
+                                  <li>
+                                    <form name="form1" method="post" action="deslogado.php">
+                                      <input type="submit" value="Sair">
+                                    </form>
+                                  </li>
                                 </ul>
                               </li>
                             <?php
@@ -81,12 +91,12 @@
                                     <input type="text" name="login" placeholder="Digite seu login" required>
                                     <input type="password" name="senha" placeholder="Digite sua senha" required>
                                   </fieldset>
-                                  <fieldset >
+                                  <fieldset>
                                     <input type="submit" value="Log in">
                                   </fieldset>
                                 </form>
                                 <form name="form2" method="post" action="telaCadastro.php">
-                                  <fieldset >
+                                  <fieldset>
                                     <input type="submit" value="Cadastre-se" href="telaCadastro.php">
                                   </fieldset>
                                 </form>
