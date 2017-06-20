@@ -2,8 +2,9 @@
   include_once("pegaNome.php");
   include_once ("conexaoBanco.php");
 
-	$x = $_GET['codigo'];
-
+  if(isset($_GET['codigo'])){
+	   $x = $_GET['codigo'];
+  }
   ?>
 
   <script type="text/javascript">

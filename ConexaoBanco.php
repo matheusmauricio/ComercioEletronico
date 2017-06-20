@@ -8,9 +8,10 @@
     }
 
 
-    $SQL = "SELECT * FROM $id";
+    $SQL = "SELECT * FROM Produto WHERE tipoVeiculo = '$id'";
     $resultado = $conexaoBanco->query($SQL);
 
     $prod = $resultado->fetchAll();
+    
 
   ?>

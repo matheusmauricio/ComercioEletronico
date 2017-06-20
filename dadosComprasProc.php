@@ -23,23 +23,17 @@
           $resultado = $conexaoBanco->query($SQL);
 
           $prod = $resultado->fetchAll();
-        }
-
-        if($prod[$i]['tipoVeiculo'] == 'moto'){
+        } else if($prod[$i]['tipoVeiculo'] == 'moto'){
           $SQL = "SELECT * FROM Venda v, Usuario u, Moto m WHERE v.codigoUsuario = '$codigoUsuario' AND v.codigoUsuario = u.codigo AND v.codigoVeiculo = m.codigo";
           $resultado = $conexaoBanco->query($SQL);
 
           $prod = $resultado->fetchAll();
-        }
-
-        if($prod[$i]['tipoVeiculo'] == 'caminhao'){
+        } else if($prod[$i]['tipoVeiculo'] == 'caminhao'){
           $SQL = "SELECT * FROM Venda v, Usuario u, Caminhao d WHERE v.codigoUsuario = '$codigoUsuario' AND v.codigoUsuario = u.codigo AND v.codigoVeiculo = d.codigo";
           $resultado = $conexaoBanco->query($SQL);
 
           $prod = $resultado->fetchAll();
-        }
-
-        if($prod[$i]['tipoVeiculo'] == 'onibus'){
+        } else if($prod[$i]['tipoVeiculo'] == 'onibus'){
           $SQL = "SELECT * FROM Venda v, Usuario u, Onibus o WHERE v.codigoUsuario = '$codigoUsuario' AND v.codigoUsuario = u.codigo AND v.codigoVeiculo = o.codigo";
           $resultado = $conexaoBanco->query($SQL);
 
