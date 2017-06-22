@@ -11,11 +11,11 @@
 
 
 
-      $SQL = "SELECT * FROM Venda v, Usuario u WHERE v.codigoUsuario = '$codigoUsuario' AND v.codigoUsuario = u.codigo";
+      $SQL = "SELECT * FROM Venda v, Usuario u, Produto p WHERE v.codigoUsuario = '$codigoUsuario' AND v.codigoUsuario = u.codigo AND v.codigoVeiculo = p.codigo";
       $resultado = $conexaoBanco->query($SQL);
 
       $prod = $resultado->fetchAll();
-
+/*
       $i=0;
       foreach($prod as $prodss) {
         if($prod[$i]['tipoVeiculo'] == 'carro'){
@@ -42,7 +42,7 @@
 
         $i++;
       }
-
+*/
       //echo $prod[0]['tipoVeiculo'];
 
       //header("location: dadosCompras.php");

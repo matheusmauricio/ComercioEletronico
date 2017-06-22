@@ -7,11 +7,16 @@
       $id = $_GET['id'];
     }
 
+    if(isset($_GET['codigo'])){
+      $codigo = $_GET['codigo'];
+    }
 
-    $SQL = "SELECT * FROM Produto WHERE tipoVeiculo = '$id'";
+
+
+    $SQL = "SELECT * FROM `Produto` WHERE `tipoVeiculo` = '$id'";
     $resultado = $conexaoBanco->query($SQL);
 
     $prod = $resultado->fetchAll();
-    
+
 
   ?>

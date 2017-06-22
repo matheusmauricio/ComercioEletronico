@@ -7,21 +7,20 @@
   }
   ?>
 
-  <script type="text/javascript">
-    function trocaImagemExpositor(url){
-
-      expositorImagem.src=url;
-
-      novaImagem.href = expositorImagem.src;
-    }
-
-
-  </script>
-
-
 <!doctype html>
 <html lang="pt-br">
 	<head>
+    <script type="text/javascript">
+      function trocaImagemExpositor(url){
+
+        expositorImagem.src=url;
+
+        novaImagem.href = expositorImagem.src;
+      }
+
+
+    </script>
+
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<title>Produto Detalhado - MmVeículos</title>
@@ -156,10 +155,12 @@
 																		} else{
 																			echo "<br /> Sem Partida Elétrica";
 																		}
+
 																	} else if($id == "caminhao"){
 																		echo "Nome: " . $prod[$x-1]['nome'];
 																		echo "<br /> Marca: " . $prod[$x-1]['marca'];
 																		echo "<br /> Ano: " . $prod[$x-1]['ano'];
+
 																	} else if($id == "onibus"){
 																		echo "Nome: " . $prod[$x-1]['nome'];
 																		echo "<br /> Marca: " . $prod[$x-1]['marca'];
