@@ -1,10 +1,18 @@
 <?php
   include_once("pegaNome.php");
-  include_once ("conexaoBanco.php");
+  require_once ("conexaoBanco.php");
 
   if(isset($_GET['codigo'])){
 	   $x = $_GET['codigo'];
+     $codigo = $x;
   }
+
+  if(isset($_GET['id'])){
+    $id = $_GET['id'];
+  }
+
+  $prod = pegaProdutoPorCodigo($codigo);
+
   ?>
 
 <!doctype html>
@@ -74,8 +82,8 @@
 																<div class="caroufredsel-wrap">
 																	<ul class="caroufredsel-items">
 																		<li class="caroufredsel-item">
-																			<a href="<?php echo $prod[$x-1]['imagem1'];?>" id="novaImagem" data-rel="magnific-popup-verticalfit">
-																				<img width="600" height="685" id="expositorImagem" src=<?php echo $prod[$x-1]['imagem1']; ?> alt=""/>
+																			<a href="<?php echo $prod['imagem1'];?>" id="novaImagem" data-rel="magnific-popup-verticalfit">
+																				<img width="600" height="685" id="expositorImagem" src=<?php echo $prod['imagem1']; ?> alt=""/>
 																			</a>
 																		</li>
 																	</ul>
@@ -97,8 +105,8 @@
 																		?>
 																		<li class="caroufredsel-item selected">
 																			<div class="thumb">
-																				<a onclick="trocaImagemExpositor('<?php echo $prod[$x-1]['imagem'.$j]; ?>')" data-rel="0">
-																					<img width="300" height="300" src=<?php echo $prod[$x-1]['imagem'.$j]; ?> alt=""/>
+																				<a onclick="trocaImagemExpositor('<?php echo $prod['imagem'.$j]; ?>')" data-rel="0">
+																					<img width="300" height="300" src=<?php echo $prod['imagem'.$j]; ?> alt=""/>
 																				</a>
 																			</div>
 																		</li>
@@ -113,10 +121,10 @@
 												</div>
 												<div class="col-md-5 col-sm-6 entry-summary">
 													<div class="summary">
-														<h1 class="product_title entry-title"><?php echo $prod[$x-1]['nome']; ?></h1>
+														<h1 class="product_title entry-title"><?php echo $prod['nome']; ?></h1>
 														<p class="price">
 															<ins>
-																<span class="amount">R$ <?php echo $prod[$x-1]['preco']; ?></span>
+																<span class="amount">R$ <?php echo $prod['preco']; ?></span>
 															</ins>
 														</p>
 														<div class="product-excerpt">
@@ -124,54 +132,54 @@
 																<!--DESCRIÇÃO.-->
 																<?php
 																	if($id == "carro"){
-																		echo "Nome: " . $prod[$x-1]['nome'];
-																		echo "<br /> Marca: " . $prod[$x-1]['marca'];
-																		echo "<br /> Modelo: " . $prod[$x-1]['modelo'];
-																		echo "<br /> Ano: " . $prod[$x-1]['ano'];
-																		echo "<br /> Cor: " . $prod[$x-1]['cor'];
-																		echo "<br />" . $prod[$x-1]['portas'] . " portas";
-																		echo "<br /> Câmbio: " . $prod[$x-1]['cambio'];
-																		echo "<br /> Potência: " . $prod[$x-1]['potencia'];
-																		echo "<br /> Combustível: " . $prod[$x-1]['combustivel'];
-																		if(strtolower($prod[$x-1]['arCondicionado']) == "true"){
+																		echo "Nome: " . $prod['nome'];
+																		echo "<br /> Marca: " . $prod['marca'];
+																		echo "<br /> Modelo: " . $prod['modelo'];
+																		echo "<br /> Ano: " . $prod['ano'];
+																		echo "<br /> Cor: " . $prod['cor'];
+																		echo "<br />" . $prod['portas'] . " portas";
+																		echo "<br /> Câmbio: " . $prod['cambio'];
+																		echo "<br /> Potência: " . $prod['potencia'];
+																		echo "<br /> Combustível: " . $prod['combustivel'];
+																		if(strtolower($prod['arCondicionado']) == "true"){
 																			echo "<br /> Com Ar-Condicionado";
 																		} else{
 																			echo "<br /> Sem Ar-Condicionado";
 																		}
-																		if(strtolower($prod[$x-1]['vidroEletrico']) == "true"){
+																		if(strtolower($prod['vidroEletrico']) == "true"){
 																			echo "<br /> Com Vidro Elétrico";
 																		} else {
 																			echo "<br /> Sem Vidro Elétrico";
 																		}
 
 																	} else if($id == "moto"){
-																		echo "Nome: " . $prod[$x-1]['nome'];
-																		echo "<br /> Marca: " . $prod[$x-1]['marca'];
-																		echo "<br /> Cilindradas: " . $prod[$x-1]['cilindradas'];
-																		echo "<br /> Ano: " . $prod[$x-1]['ano'];
-																		echo "<br /> Cor: " . $prod[$x-1]['cor'];
-																		if(strtolower($prod[$x-1]['partidaEletrica']) == "true"){
+																		echo "Nome: " . $prod['nome'];
+																		echo "<br /> Marca: " . $prod['marca'];
+																		echo "<br /> Cilindradas: " . $prod['cilindradas'];
+																		echo "<br /> Ano: " . $prod['ano'];
+																		echo "<br /> Cor: " . $prod['cor'];
+																		if(strtolower($prod['partidaEletrica']) == "true"){
 																			echo "<br /> Com Partida Elétrica";
 																		} else{
 																			echo "<br /> Sem Partida Elétrica";
 																		}
 
 																	} else if($id == "caminhao"){
-																		echo "Nome: " . $prod[$x-1]['nome'];
-																		echo "<br /> Marca: " . $prod[$x-1]['marca'];
-																		echo "<br /> Ano: " . $prod[$x-1]['ano'];
+																		echo "Nome: " . $prod['nome'];
+																		echo "<br /> Marca: " . $prod['marca'];
+																		echo "<br /> Ano: " . $prod['ano'];
 
 																	} else if($id == "onibus"){
-																		echo "Nome: " . $prod[$x-1]['nome'];
-																		echo "<br /> Marca: " . $prod[$x-1]['marca'];
-																		echo "<br /> Ano: " . $prod[$x-1]['ano'];
+																		echo "Nome: " . $prod['nome'];
+																		echo "<br /> Marca: " . $prod['marca'];
+																		echo "<br /> Ano: " . $prod['ano'];
 																	}
 
 																?>
 
 															</p>
 														</div>
-														<form class="cart" name="form1" method="post" action="comprarVeiculo.php?id=<?php echo $id; ?>&codigo=<?php echo $prod[$x-1]['codigo']; ?>">
+														<form class="cart" name="form1" method="post" action="comprarVeiculo.php?id=<?php echo $id; ?>&codigo=<?php echo $prod['codigo']; ?>">
 															<div class="add-to-cart-table">
 																<button type="submit" class="button">Comprar</button>
 															</div>

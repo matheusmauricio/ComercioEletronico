@@ -2,6 +2,15 @@
   include_once("pegaNome.php");
   include_once ("conexaoBanco.php");
 
+
+
+    if(isset($_GET['id'])){
+      $id = $_GET['id'];
+    }
+
+    $prod = pegaProdutoPorTipo($id);
+
+
   ?>
 
 <!DOCTYPE html>
