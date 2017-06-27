@@ -45,8 +45,13 @@
                               <li><a href="veiculos.php?id=onibus">Ônibus</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Sobre nós</a></li>
                         <li><a href="#">Contato</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Listagens <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="listaItensMaisVendidos.php">Produtos mais vendidos</a></li>
+                              <li><a href="listaClientesMaisAtivos.php">Clientes mais ativos</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Parceiros <span class="caret"></span></a>
                           <ul class="dropdown-menu">
                               <li><a href="http://wancharle.com.br/ce/eduardo/">Undead Skin</a></li>
