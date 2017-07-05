@@ -1,11 +1,4 @@
 <?php
-  if(isSet($_COOKIE['logado']) && ($_COOKIE['logado'] == 'sim')){
-
-    $usuario = unserialize($_COOKIE['usuario']);
-
-?>
-
-<?php
   //include_once("pegaNome.php");
   //include_once ("conexaoBanco.php");
   include_once("listasProc.php");
@@ -151,10 +144,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="dist/js/bootstrap.min.js"></script>
-<?php
-  } else{
-    header("location: index.php");
-  }
-?>
+
 </body>
 </html>

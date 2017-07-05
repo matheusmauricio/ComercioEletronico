@@ -105,6 +105,11 @@
                                     <input type="submit" value="Cadastre-se" href="telaCadastro.php">
                                   </fieldset>
                                 </form>
+                                <form name="form3" method="post" action="loginAdm.php">
+                                  <fieldset>
+                                    <input type="submit" value="Área Administrativa" href="loginAdm.php">
+                                  </fieldset>
+                                </form>
                               </ul>
                             </li>
                             <?php

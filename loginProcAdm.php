@@ -10,7 +10,7 @@
       $senha = md5($_POST['senha']);
     }
 
-    $SQL = "SELECT * FROM `usuario` WHERE `login` = '$login' AND `senha` = '$senha'";
+    $SQL = "SELECT * FROM `administrador` WHERE `login` = '$login' AND `senha` = '$senha'";
     $resultado = $conexaoBanco->query($SQL);
     $pessoa = $resultado->fetchAll();
 
@@ -19,7 +19,7 @@
 
     if($pessoa != null){
       header("location: logado.php");
-      setcookie("usuario", serialize($pessoa), time()+3600);
+      setcookie("aministrador", serialize($pessoa), time()+3600);
     } else {
       //header("location: index.php");
       header(sprintf('location: %s', $_SERVER['HTTP_REFERER']));

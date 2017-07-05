@@ -1,11 +1,4 @@
 <?php
-  if(isSet($_COOKIE['logado']) && ($_COOKIE['logado'] == 'sim')){
-
-    $usuario = unserialize($_COOKIE['usuario']);
-
-?>
-
-<?php
   //include_once("pegaNome.php");
   //include_once ("conexaoBanco.php");
   include_once("listasProc.php");
@@ -85,7 +78,14 @@
                                     <li class="product product-no-border style-2 masonry-item col-md-3 col-sm-6 aliquam nulla">
                                         <div class="product-container">
                                             <figure>
-
+                                              <div class="product-wrap">
+                                                  <div class="product-images">
+                                                      <img width="200" height="200" src=<?php if($i+1 == 1){ echo "imagens/trofeu_ouro.jpg"; }
+                                                      else if ($i+1 == 2){ echo "imagens/trofeu_prata.jpg"; }
+                                                      else if ($i+1 == 3){ echo "imagens/trofeu_bronze.jpg"; }
+                                                      else{ echo "imagens/medalha.jpg"; } ?> alt=""/>
+                                                  </div>
+                                              </div>
                                                 <figcaption>
                                                     <div class="shop-loop-product-info">
                                                       <h3 class="product_title">
@@ -142,10 +142,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="dist/js/bootstrap.min.js"></script>
-<?php
-  } else{
-    header("location: index.php");
-  }
-?>
+
 </body>
 </html>
