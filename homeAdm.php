@@ -18,6 +18,7 @@
                     <h2>Dashboard</h2>
                     <ul class="nav nav-pills nav-stacked">
                         <li><a href="cadastrarVeiculos.php">Cadastrar Veículos</a></li>
+                        <li><a href="estoque.php">Estoque Zero</a></li>
                         <li><a href="deslogarAdm.php">Sair</a></li>
                     </ul>
                 </div><br>

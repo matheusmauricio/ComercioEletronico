@@ -9,6 +9,10 @@
     $data = date('d/m/y');
     $codigoVeiculo = $_POST['codigoVeiculo'];
     $tipoVeiculo = $_POST['tipoVeiculo'];
+    $quantidadeEstoque = $_POST['quantidadeEstoque'];
+
+    $SQL = "UPDATE 'Produto' SET quantidadeEstoque = '$quantidadeEstoque' WHERE codigo = '$codigoVeiculo'";
+    $resultado = $conexaoBanco->query($SQL);
 
     $SQL = "INSERT INTO 'Venda' (codigoUsuario, valorVenda, data, codigoVeiculo, tipoVeiculo) VALUES ('$codigoUsuario', '$valorVenda', '$data', '$codigoVeiculo', '$tipoVeiculo')";
     $resultado = $conexaoBanco->query($SQL);

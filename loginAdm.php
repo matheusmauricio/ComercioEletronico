@@ -1,6 +1,6 @@
 <?php
 include_once("funcaoLogar.php");
-$logado = estaLogado();
+$logado = estaLogadoAdm();
 ?>
 
 

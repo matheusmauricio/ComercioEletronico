@@ -1,17 +1,9 @@
+
 <?php
-  include_once("pegaNome.php");
   include_once ("conexaoBanco.php");
 
-//id = tipo do veículo
-
-    if(isset($_GET['id'])){
-      $id = $_GET['id'];
-    }
-
-    $prod = pegaProdutoPorTipo($id);
-
-
-  ?>
+  $prod = pegaProdutoEstoqueZero();
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,19 +41,15 @@
   <!-- Custom styles for this template -->
   <link href="jumbotron.css" rel="stylesheet">
 
-  <title><?php echo ucfirst($nome); ?> - MmVeículos</title>
+  <title>Veículos Com Estoque Zero - MmVeículos</title>
 
 </head>
 
 <body>
 
-<?php
-  include_once("cabecalho.php");
-?>
-
 <div class="jumbotron">
     <div class="container">
-        <h1><?php echo mb_strtoupper($nome, 'UTF-8'); ?> </h1>
+        <h1>Veículos Com Estoque Zero - MmVeículos</h1>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais! &raquo;</a></p>     BOTÃO SAIBA MAIS       -->
     </div>
 </div>
@@ -81,61 +69,46 @@
                             <div class="products-masonry-wrap">
                                 <ul class="products masonry-products row masonry-wrap">
                                   <?php
-                                  $i=0;
-                                  foreach($prod as $prods) {
+                                    $i=0;
+                                    foreach($prod as $prods) {
 
                                   ?>
 
-                                    <li class="product product-no-border style-2 masonry-item col-md-3 col-sm-6 aliquam nulla">
-                                        <div class="product-container">
-                                            <figure>
-                                                <div class="product-wrap">
-                                                    <div class="product-images">
-                                                        <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
-                                                            <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><img width="450" height="450" src=<?php echo $prod[$i]['imagem1']; ?> alt=""/></a>
-                                                        </div>
-                                                        <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
-                                                            <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><img width="450" height="450" src=<?php echo $prod[$i]['imagem2']; ?> alt=""/></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <figcaption>
-                                                    <div class="shop-loop-product-info">
-
-                                                        <div class="info-content-wrap">
-                                                            <h3 class="product_title">
-                                                                <a href="veiculoDetalhado.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><?php echo $prod[$i]['nome']; ?></a>
-                                                            </h3>
-                                                            <div class="info-price">
-																		<span class="price">
-																			<span class="amount">R$ <?php echo $prod[$i]['preco']; ?></span>
-																		</span>
-                                                            </div>
-                                                            <div class="loop-action">
-                                                                <div class="loop-add-to-cart">
-                                                                    <a href="comprarVeiculo.php?id=<?php echo $id ?>&codigo=<?php echo $prod[$i]['codigo'] ?>" class="add_to_cart_button">
-                                                                        Comprar
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                    </li>
-                                    <?php
-                                      $i++;
-                                       }
-                                     ?>
-
-                                </ul>
+                                  <li class="product product-no-border style-2 masonry-item col-md-3 col-sm-6 aliquam nulla">
+                                      <div class="product-container">
+                                          <figure>
+                                              <div class="product-wrap">
+                                                  <div class="product-images">
+                                                      <div class="shop-loop-thumbnail shop-loop-front-thumbnail">
+                                                          <a href="veiculoDetalhado.php?id=<?php echo $prod[$i]['tipoVeiculo'] ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><img width="450" height="450" src=<?php echo $prod[$i]['imagem1']; ?> alt=""/></a>
+                                                      </div>
+                                                      <div class="shop-loop-thumbnail shop-loop-back-thumbnail">
+                                                          <a href="veiculoDetalhado.php?id=<?php echo $prod[$i]['tipoVeiculo'] ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><img width="450" height="450" src=<?php echo $prod[$i]['imagem2']; ?> alt=""/></a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <figcaption>
+                                                  <div class="shop-loop-product-info">
+                                                    <h3 class="product_title">
+                                                        <a href="veiculoDetalhado.php?id=<?php echo $prod[$i]['tipoVeiculo'] ?>&codigo=<?php echo $prod[$i]['codigo'] ?>"><?php echo $prod[$i]['nome']; ?></a>
+                                                    </h3>
+                                                    <div class="info-price">
+                                                    <span class="price">
+                                                      <span class="amount">R$ <?php echo $prod[$i]['preco']; ?></span>
+                                                    </span>
+                                                      </div>
+                                                  </div>
+                                              </figcaption>
+                                          </figure>
+                                      </div>
+                                  </li>
+                                  <?php
+                                    $i++;
+                                     }
+                                   ?>
+                              </ul>
                             </div>
-                            <div class="loadmore-action">
-                                <a class="btn btn-default-outline btn-outline" href="#">
-                                    <span>Load More</span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -167,9 +140,6 @@
     </div>
 </div>
 
-<?php
-  include_once("rodape.php");
-?>
 
 <script type='text/javascript' src='dist/js/jquery.js'></script>
 <script type='text/javascript' src='dist/js/jquery-migrate.min.js'></script>

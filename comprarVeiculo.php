@@ -188,6 +188,7 @@
                                 <input type="text" name="codigoVeiculo" value="<?php echo $prod['codigo']; ?>" hidden>
                                 <input type="text" name="tipoVeiculo" value="<?php echo $id; ?>" hidden>
                                 <input type="text" name="valorVenda" value="<?php echo $prod['preco']; ?>" hidden>
+                                <input type="text" name="quantidadeEstoque" value="<?php echo ($prod['quantidadeEstoque'] - 1); ?>" hidden>
                                 <button type="submit" class="button">Confirmar compra</button>
                               </div>
                             </form>

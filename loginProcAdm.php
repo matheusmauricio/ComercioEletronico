@@ -18,7 +18,7 @@
     //echo $pessoa[0]['nome'];
 
     if($pessoa != null){
-      header("location: logado.php");
+      header("location: logadoAdm.php");
       setcookie("aministrador", serialize($pessoa), time()+3600);
     } else {
       //header("location: index.php");
